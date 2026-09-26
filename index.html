@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shoaib DJ Sound provides professional DJ sound, jalsa, qawwali, orchestra, wedding and event sound services in Majhia More
+    <meta name="keywords" content="Shoaib DJ Sound, Garhwa DJ, Jalsa Sound Garhwa, Qawwali Sound Jharkhand, Wedding Sound Garhwa, Event Light Sound Majhia More"
+    <meta name="author" content="Shoaib DJ Sound">
+
+   <meta property="og:title" content="Shoaib DJ Sound | DJ Sound, Jalsa, Qawwali & Event Services in Garhwa">
+   <meta property="og:description" content="Premium sound system and complete event management services for Jalsa, Qawwali, Weddings, Orchestras, and Stage Pro
+   <meta property="og:type" content="website">
+   <meta property="og:locale" content="en_IN">
+
+   <title>Shoaib DJ Sound | DJ Sound, Jalsa, Qawwali & Event Services in Garhwa</title>
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@600;700;800&display=swap" rel="styles
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+   <style>
+       /* CSS VARIABLES & DESIGN SYSTEM */
+       :root {
+           --bg-base: #070709;
+           --bg-card: rgba(18, 18, 24, 0.7);
+           --bg-surface: #0f0f15;
+           --primary-gold: #D4AF37;
+           --primary-gold-light: #F3E5AB;
+           --primary-gold-dark: #AA7C11;
+           --text-main: #F4F4F6;
+           --text-muted: #A0A0AB;
+           --border-light: rgba(212, 175, 55, 0.18);
+           --font-main: 'Plus Jakarta Sans', sans-serif;
+           --font-display: 'Cinzel', serif;
+       }
+
+       *, *::before, *::after {
+           box-sizing: border-box;
+           margin: 0;
+           padding: 0;
+       }
+
+       html {
+           scroll-behavior: smooth;
+           font-size: 16px;
+           color-scheme: dark;
+       }
+
+       body {
+           background-color: var(--bg-base);
+           color: var(--text-main);
+           font-family: var(--font-main);
+           line-height: 1.6;
+           overflow-x: hidden;
+       }
+
+       .container {
+           width: 100%;
+           max-width: 1240px;
+           margin: 0 auto;
+           padding: 0 1.5rem;
+       }
+
+       .section-padding {
+           padding: 6rem 0;
+       }
+
+       .glass-card {
+           background: var(--bg-card);
+           backdrop-filter: blur(12px);
+           border: 1px solid var(--border-light);
+           border-radius: 14px;
+           box-shadow: 0 8px 32px rgba(0,0,0,.5);
+       }
+
+       .btn {
+           display: inline-flex;
+           align-items: center;
+           justify-content: center;
+           gap: .6rem;
+           padding: .85rem 1.8rem;
+           font-weight: 700;
+           border-radius: 50px;
+       }
+
+       .btn-primary {
+           background: linear-gradient(135deg, var(--primary-gold), var(--primary-gold-dark));
+           color: #000;
+       }
+
+       .btn-secondary {
+           background: rgba(255,255,255,.05);
+           color: var(--text-main);
+
+    border: 1px solid var(--border-light);
+}
+
+.btn-whatsapp {
+    background: linear-gradient(135deg,#25D366,#128C7E);
+    color: #fff;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(7,7,9,.85);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.brand-icon {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg,var(--primary-gold),var(--primary-gold-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+}
+
+.brand-text {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #fff;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-link {
+    font-size: .9rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+    overflow: hidden;
+    background: #000;
+}
+
+.hero-bg-wrapper {
+    position: absolute;
+    inset: 0;
+}
+
+.hero-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(.35) contrast(1.15);
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,rgba(7,7,9,.7),rgba(7,7,9,.4),#070709);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem,7vw,5rem);
+    line-height: 1.1;
+    color: #fff;
+
+}
+
+.hero-title span {
+    color: var(--primary-gold);
+    display: block;
+}
+
+.hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .6rem 1.2rem;
+    color: var(--primary-gold-light);
+    margin: 2rem 0;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 3.5rem;
+    align-items: center;
+}
+
+.leadership-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+
+.profile-card {
+    padding: 1.5rem;
+    text-align: center;
+    border: 1px solid var(--border-light);
+    border-radius: 14px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+    gap: 1.75rem;
+}
+
+.service-card {
+    overflow: hidden;
+}
+
+.service-img-wrapper {
+    height: 180px;
+    overflow: hidden;
+}
+
+.service-img-wrapper img,
+.gallery-item img,
+.about-image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-content {
+    padding: 1.75rem 1.5rem;
+}
+
+.gallery-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .6rem;
+    margin-bottom: 2.5rem;
+}
+
+.filter-btn {
+    padding: .5rem 1.2rem;
+    border-radius: 50px;
+    color: var(--text-muted);
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(255,255,255,.08);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    position: relative;
+    height: 260px;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
+    gap: 2rem;
+}
+
+        .feature-card {
+            padding: 2rem;
+            display: flex;
+            gap: 1.25rem;
+        }
+
+        .booking-banner {
+            position: relative;
+            border-radius: 20px;
+            padding: 4rem 2rem;
+            text-align: center;
+            background: linear-gradient(135deg,rgba(20,20,28,.95),rgba(10,10,15,.98));
+            border: 1px solid var(--border-light);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+        }
+
+        .contact-info-card,
+        .map-card {
+            padding: 2.5rem;
+        }
+
+        .footer {
+            background: #030305;
+            border-top: 1px solid rgba(255,255,255,.08);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1.5fr;
+            gap: 3rem;
+        }
+
+        @media(max-width:992px) {
+            .about-grid,.contact-grid { grid-template-columns:1fr; }
+            .footer-grid { grid-template-columns:1fr 1fr; }
+        }
+
+        @media(max-width:768px) {
+            .nav-menu { display:none; }
+            .leadership-cards { grid-template-columns:1fr; }
+            .footer-grid { grid-template-columns:1fr; }
+            .booking-banner { padding:2.5rem 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="navbar">
+    <div class="container navbar-container">
+        <a href="#home" class="brand-logo">
+            <div class="brand-icon"><i class="fa-solid fa-compact-disc"></i></div>
+            <div class="brand-text">SHOAIB DJ SOUND</div>
+        </a>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#booking" class="nav-link">Booking</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+<section id="home" class="hero">
+    <div class="hero-bg-wrapper">
+        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1920&q=80"
+             alt="Live DJ Sound and Stage Concert Lighting" class="hero-bg-image">
+        <div class="hero-overlay"></div>
+    </div>
+    <div class="container">
+        <div class="hero-content">
+            <div>GARHWA'S PREMIER EVENT SOUND SYSTEM</div>
+            <h1 class="hero-title">
+                SHOAIB DJ SOUND
+                <span>POWERFUL AUDIO EXPERIENCE</span>
+            </h1>
+            <p>Professional Sound & Event Services in Garhwa, Jharkhand</p>
+            <div class="hero-tags">
+                <span>Jalsa</span><span>Qawwali</span><span>Orchestra</span>
+                <span>Wedding</span><span>Events</span><span>Programs</span>
+            </div>
+            <div class="hero-actions">
+                <a href="#booking" class="btn btn-primary">Book Now</a>
+                <a href="tel:9905741833" class="btn btn-secondary">Call Now</a>
+            </div>
+            <p>Alternate Contact: <a href="tel:8541820586">8541820586</a></p>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section-padding">
+<div class="container">
+<div class="about-grid">
+<div>
+<div>WHO WE ARE</div>
+
+<h2>About Shoaib DJ Sound</h2>
+<p>Shoaib DJ Sound is a premier event-sound and production service based in Majhia More, Garhwa, Jharkhand. We specialize in high-fidelity live sound setups for
+<p>Our team focuses on clear vocals, punchy bass and balanced sound distribution, combining professional audio gear with stage lighting for events across Garhwa
+<div class="leadership-cards">
+<div class="profile-card"><div>DIRECTOR</div><strong>Shoaib Ahmad</strong></div>
+<div class="profile-card"><div>VICE DIRECTOR</div><strong>Altaf Hussain</strong></div>
+</div>
+</div>
+<div class="about-image-card">
+<img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1000&q=80"
+     alt="Professional Sound Console Setup">
+</div>
+</div>
+</div>
+</section>
+
+<section id="services" class="section-padding">
+<div class="container">
+<h2>Professional Event Sound Services</h2>
+<div class="services-grid">
+<div class="glass-card service-card"><div class="service-img-wrapper"><img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=cro
+<div class="glass-card service-card"><div class="service-img-wrapper"><img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=cro
+<div class="glass-card service-card"><div class="service-img-wrapper"><img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=cro
+<div class="glass-card service-card"><div class="service-img-wrapper"><img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=cro
+<div class="glass-card service-card"><div class="service-img-wrapper"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=cro
+<div class="glass-card service-card"><div class="service-img-wrapper"><img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=cro
+<div class="glass-card service-card"><div class="service-img-wrapper"><img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=cro
+<div class="glass-card service-card"><div class="service-img-wrapper"><img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w
+<div class="glass-card service-card"><div class="service-img-wrapper"><img src="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?auto=format&fit=cro
+<div class="glass-card service-card"><div class="service-img-wrapper"><img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=cro
+<div class="glass-card service-card"><div class="service-img-wrapper"><img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=cro
+<div class="glass-card service-card"><div class="service-img-wrapper"><img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=cro
+</div>
+</div>
+</section>
+
+<section id="gallery" class="section-padding">
+<div class="container">
+<h2>Event Experience Gallery</h2>
+<div class="gallery-filter">
+<button class="filter-btn">All Photos</button><button class="filter-btn">Wedding</button>
+<button class="filter-btn">Qawwali</button><button class="filter-btn">Orchestra</button>
+<button class="filter-btn">Jalsa</button><button class="filter-btn">DJ Setup</button>
+<button class="filter-btn">Stage & Lighting</button>
+</div>
+<div class="gallery-grid">
+<img class="gallery-item" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80">
+<img class="gallery-item" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80">
+<img class="gallery-item" src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=800&q=80">
+<img class="gallery-item" src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80">
+<img class="gallery-item" src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80">
+<img class="gallery-item" src="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?auto=format&fit=crop&w=800&q=80">
+</div>
+</div>
+</section>
+
+<section class="section-padding">
+<div class="container">
+<h2>Why Choose Shoaib DJ Sound</h2>
+<div class="features-grid">
+<div class="glass-card feature-card"><h3>Professional Sound</h3><p>Clear, balanced and powerful audio.</p></div>
+<div class="glass-card feature-card"><h3>Professional Team</h3><p>On-site sound operators and technicians.</p></div>
+<div class="glass-card feature-card"><h3>Modern Equipment</h3><p>Modern consoles, microphones, amplifiers and LED setups.</p></div>
+<div class="glass-card feature-card"><h3>Event Support</h3><p>Customized setups for halls, grounds and stages.</p></div>
+<div class="glass-card feature-card"><h3>Flexible Booking</h3><p>Direct communication and tailored scheduling.</p></div>
+<div class="glass-card feature-card"><h3>Local Service</h3><p>Based in Majhia More, Garhwa.</p></div>
+</div>
+</div>
+</section>
+
+<section id="booking" class="section-padding">
+<div class="container">
+<div class="booking-banner">
+<h2>BOOK YOUR EVENT TODAY</h2>
+<p>Planning a wedding, jalsa, qawwali, orchestra or any event? Contact Shoaib DJ Sound for booking and requirements.</p>
+<a class="btn btn-primary" href="tel:9905741833">Call 9905741833</a>
+<a class="btn btn-whatsapp" href="https://wa.me/919905741833">WhatsApp</a>
+</div>
+</div>
+</section>
+
+<section id="contact" class="section-padding">
+<div class="container">
+<div class="contact-grid">
+<div class="glass-card contact-info-card">
+<h2>Contact Us</h2>
+<p><strong>Phone:</strong> 9905741833</p>
+<p><strong>Alternate:</strong> 8541820586</p>
+<p><strong>Location:</strong> Majhia More, Garhwa, Jharkhand</p>
+</div>
+<div class="glass-card map-card">
+<h2>Majhia More, Garhwa</h2>
+<p>Serving Garhwa and neighboring regions.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div><h2>SHOAIB DJ SOUND</h2><p>Professional DJ sound, Jalsa, Qawwali, Orchestra, Wedding and Event Sound Services.</p></div>
+<div><h3>Quick Links</h3><p>Home · About · Services · Gallery · Booking · Contact</p></div>
+<div><h3>Contact</h3><p>9905741833<br>8541820586<br>Majhia More, Garhwa, Jharkhand</p></div>
+
+</div>
+<p style="text-align:center">© 2026 Shoaib DJ Sound. All Rights Reserved.</p>
+</div>
+</footer>
+
+<script>
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const navMenu = document.getElementById('navMenu');
+
+if (hamburgerBtn && navMenu) {
+    hamburgerBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('is-active');
+        hamburgerBtn.classList.toggle('is-active');
+    });
+}
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+    });
+});
+</script>
+
+</body>
+</html>
